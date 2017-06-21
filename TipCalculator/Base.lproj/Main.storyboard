@@ -86,7 +86,13 @@
                             <outletCollection property="gestureRecognizers" destination="FCd-fR-eAb" appends="YES" id="vcq-Ww-S8F"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="Ovn-zi-RY0"/>
+                    <navigationItem key="navigationItem" title="Title" id="Ovn-zi-RY0">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="dZV-ps-tpc">
+                            <connections>
+                                <segue destination="dcj-xv-kRx" kind="push" id="2bT-Q9-mTE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="billField" destination="bKa-ND-jaq" id="hqJ-oW-ky4"/>
                         <outlet property="tipControl" destination="Hd6-uL-XCG" id="juJ-Qn-jei"/>
@@ -103,19 +109,38 @@
             </objects>
             <point key="canvasLocation" x="424" y="154"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="DGI-Jq-A0V">
+        <!--Default Settings-->
+        <scene sceneID="7a8-5T-HHT">
             <objects>
-                <viewController id="cNx-R2-5MM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="DEI-NG-DV2">
+                <viewController id="dcj-xv-kRx" customClass="SettingsViewController" customModule="TipCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bt2-aa-ClI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" id="6xU-kp-Xup">
+                                <rect key="frame" x="40" y="201" width="241" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="18%"/>
+                                    <segment title="20%"/>
+                                    <segment title="25%"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Choose your default tip percentage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PS7-3S-adP">
+                                <rect key="frame" x="25" y="125" width="270" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Default Settings" id="0e7-jz-c6n"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dN6-Yj-Nvf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4KM-pW-Yya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="816" y="154"/>
+            <point key="canvasLocation" x="840" y="154"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Bid-BM-Mrm">
